@@ -25,6 +25,6 @@ async def start(message: types.Message):
                 url=BASE_URL
         )
     )
-    await message.answer(f"**Hi {message.from_user.get_mention(as_html=False)}**,\nI can **search memes** for you ;)",
-                         parse_mode=types.ParseMode.MARKDOWN_V2,
+    await message.answer(f"<b>Hi {message.from_user.get_mention(as_html=True)}</b>,\nI can <b>search memes</b> for you ;)",
+                         parse_mode=types.ParseMode.HTML,
                          reply_markup=markup)
